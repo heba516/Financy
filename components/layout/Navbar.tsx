@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Icon } from "@iconify/react";
 import NavLinks from "./NavLinks";
+import { Notifications } from "./Notifications";
 
 export default function Navbar() {
   return (
@@ -19,21 +20,22 @@ export default function Navbar() {
         <NavLinks />
 
         <div className="flex items-center gap-4">
-          <button
-            type="button"
+          <Link
+            href="/settings"
             aria-label="Settings"
             className="p-2 cursor-pointer text-gray hover:text-brand hover:bg-brand/10 rounded-full transition-colors"
           >
             <Icon icon="carbon:settings" width="24" height="24" />
-          </button>
+          </Link>
 
-          <button
+          {/* <button
             type="button"
             aria-label="Notifications"
             className="p-2 cursor-pointer text-gray hover:text-brand hover:bg-brand/10 rounded-full transition-colors"
           >
             <Icon icon="bytesize:bell" width="24" height="24" />
-          </button>
+          </button> */}
+          <Notifications/>
 
           <Image
             src="/my-account.png"
