@@ -27,14 +27,7 @@ export default function Navbar() {
           >
             <Icon icon="carbon:settings" width="24" height="24" />
           </Link>
-
-          {/* <button
-            type="button"
-            aria-label="Notifications"
-            className="p-2 cursor-pointer text-gray hover:text-brand hover:bg-brand/10 rounded-full transition-colors"
-          >
-            <Icon icon="bytesize:bell" width="24" height="24" />
-          </button> */}
+          
           <Notifications/>
 
           <Image
