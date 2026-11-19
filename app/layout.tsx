@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Noto_Sans, Playfair_Display } from "next/font/google";
+import { Geist, Geist_Mono, Noto_Sans, Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import { cn } from "@/lib/utils";
@@ -18,6 +18,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
   title: "Financy",
   description: "Financy Dashboard",
@@ -27,7 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", notoSans.variable, playfairDisplayHeading.variable)}
+      className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, inter.variable,"font-sans", notoSans.variable, playfairDisplayHeading.variable)}
     >
       <body className="min-h-full flex flex-col">
         <Navbar/>
